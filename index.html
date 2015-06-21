@@ -1,1 +1,164 @@
-default
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing Data Products Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing Data Products Project">
+  <meta name="author" content="Sanya B">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/frameworks/io2012/js/slides" 
+    src="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing Data Products Project</h1>
+    <h2>BMI Calculator</h2>
+    <p>Sanya B<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The BMI Calculator appication is designed as part of Coursera&#39;s Developing Data Products Course Project. This course is a part of the Data Science Specialization track. The application takes as input height and weight of the user, calculates the BMI (Body Mass Index) of the person and prints it out.</p>
+
+<p>The application includes the following:</p>
+
+<ul>
+<li>Numeric input fields to enter height in feet and inches and weight in kgs.</li>
+<li>Minimum and maximum values of each input field have been set.</li>
+<li>Default values displayed on load of the application.</li>
+<li>Operation performed on the ui input in server.R</li>
+<li>BMI computed and displayed as a result of server calculations</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>BMI Calculation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Body Mass Index is calculated as follows:   </p>
+
+<p>Weight (in kgs) / (Height (in m) x Height (in m))</p>
+
+<ul>
+<li>The application accepts the weight in kg and height in feet and inches and performs the necessary conversion of units as per the formula.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>BMI Calculation in R</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Suppose, I weigh 55 kgs and I am 5 feet and 5 inches tall, the BMI shiny app would calculate my Body Mass Index in the following manner.</p>
+
+<pre><code class="r">feet=5
+inch=5
+kg=55
+
+bmi=kg/((((feet*12)+inch)*0.025)^2)
+print(bmi)
+</code></pre>
+
+<pre><code>## [1] 20.8284
+</code></pre>
+
+<p>BMI formula requires the height to be in metres if the weight is in kgs, hence we multiply the height component by 0.025 to convert  it from feet to metres.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Links</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://sanya14.shinyapps.io/BMICalc">BMI Calculator</a> - Shiny App</p>
+
+<p><a href="https://sanya14.shinyapps.io/BMIDoc">BMI Documentation</a> - Shiny App Documentation</p>
+
+<p><a href="https://github.com/sanyabhogal24/BMICalc">server.R and ui.R</a> - Link to Github repository</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='BMI Calculation'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='BMI Calculation in R'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Links'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="C:/Program Files (x86)/R/R-3.1.3/library/slidifyLibraries/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
